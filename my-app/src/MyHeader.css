@@ -1,0 +1,60 @@
+
+
+.header {
+    max-width: 100% !important;
+    margin:0% !important;
+    padding: 0% !important;
+}
+.navigation {
+    display: inline;
+    margin-inline-start: 5%;
+    font-size: 14px;
+    border-style: none;
+    background-color: transparent;
+    text-decoration: none; 
+}
+.navigation ul {
+    display: inline;
+    list-style-type: none;
+}
+.navigation li{
+    display: inline;
+    text-align: left;
+    margin-right: 1%;
+}
+.navigation li:not(:first-child){
+    display: inline;
+    border-right: 2px solid rgb(192, 190, 190); 
+    text-align: left;
+    padding: 2px 15px;
+}
+.navigation :hover {
+    color: #cf0067;
+    background-color: transparent;
+    text-decoration: none;
+}
+.navigation :link, :visited {
+    color:#414040; 
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.header-logo{
+    background:url(./img/reyhoon.png) no-repeat;
+    cursor:pointer;
+    /* border:none; */
+    border: none;
+    width: 90px; 
+    height: 30px;
+    background-size: cover;
+}
+.liny {
+    max-width: 100% !important;  
+    margin:0% !important;
+    background-image: linear-gradient(to right, #fe0613 , #8b00ae);
+    margin-block-start: 1%;
+    height: 4px; 
+}
+.header-row{
+    justify-content: space-around;
+}

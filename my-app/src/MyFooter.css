@@ -1,0 +1,157 @@
+.footer{
+    justify-content: center;
+    max-width: 100% !important;
+    margin:0% !important;
+    padding: 0% !important;
+    
+}
+.footer1{
+    /* display: grid;
+    grid-template-columns: auto auto auto auto auto auto; */
+    /* grid-column-gap: 30px; */
+    /* height: 350px; */
+    justify-content: space-evenly;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    background: #202020;
+}
+.footer-column1{
+    /* grid-column: 1 / span 2; */
+    /* grid-row: 1; */
+    color: #9b9b9b;
+    padding: 10px;
+    min-width: 150px;
+    /* max-width: 200px; */
+    font-size: 14px;
+    margin-block-start: 20px;
+}
+.footer-column {
+    max-width: 250px;
+    min-width: 110px;
+    padding: 10px;
+}
+.footer-line1{
+    background-color: #8b00af;
+    font-size: 2px;
+    /* width: 100%; */
+}
+.footer-line2{
+    background-color: #d40062;
+    font-size: 2px;
+    /* width: 100%; */
+}
+.footer-line3{
+    background-color: #ff0613;
+    font-size: 2px;
+    /* width: 100%; */
+}
+.footer-line4{
+    background-color: #ffc300;
+    font-size: 2px;
+    /* width: 100%; */
+}
+.footer-column1 a { 
+    color: #5890ff;
+    font-size: 14px;
+    text-decoration:none;
+}  
+.footer-column1 a:hover {
+    color: #5890ff;
+    text-decoration : none;
+}
+.footer-column a { 
+    color:#9b9b9b;
+    font-size: 14px;
+    text-decoration:none;
+}  
+.footer-column a:hover {
+    color: #9b9b9b;
+    text-decoration : none;
+}
+.footer-column-header {
+    font-size: 14px;
+    padding-block-start: 20px;
+    padding-block-end: 20px;
+}
+.footer-column-header a{
+    color:#ffffff;
+    text-decoration:none;
+    
+}
+.footer-myButton1{
+    background:url(./img/application-download-link/google-play-dark.png) no-repeat;
+    cursor:pointer;
+    /* border:none; */
+    border: 1px solid transparent;
+    border-color:#4a4a4a;
+    border-radius: 5px;
+    width: 130px; 
+    height:40px;
+    background-size: cover;
+}
+.footer-myButton2{
+    background:url(./img/application-download-link/sib-app-dark.png) no-repeat;
+    cursor:pointer;
+    /* border:none; */
+    border: 1px solid transparent;
+    border-color:#4a4a4a;
+    border-radius: 5px;
+    width: 130px; 
+    height:40px;
+    background-size: cover;
+}
+.footer-myButton3{
+    background:url(./img/application-download-link/cafebazaar-dark.png) no-repeat;
+    cursor:pointer;
+    /* border:none; */
+    border: 1px solid transparent;
+    border-color:#4a4a4a;
+    border-radius: 5px;
+    width: 130px; 
+    height:40px;
+    background-size: cover;
+}
+.footer-logo1{
+    background:url(./img/logo1.png) no-repeat;
+    cursor:pointer;
+    /* border:none; */
+    border: none;
+    width: 125px; 
+    height:136px;
+    background-size: cover;
+}
+.footer-logo2{
+    background:url(./img/logo2.png) no-repeat;
+    cursor:pointer;
+    /* border:none; */
+    border: none;
+    width: 125px; 
+    height:136px;
+    background-size: cover;
+}
+.footer2{
+    background: #202020;
+    text-align: center;
+    justify-content: center;
+}
+.footer3{
+    /* display: grid; */
+    /* grid-template-columns: auto auto; */
+    /* grid-column-gap: 530px; */
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    background: #191919;
+    text-align: center;
+    padding-block-start: 30px;
+    padding-block-end: 30px;
+    color: #9b9b9b
+}
+.my-icon{
+    color: #9b9b9b;
+    font-size: 0.7rem;
+}
+.micon {
+    padding-right: 30px;
+}

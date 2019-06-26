@@ -1,5 +1,37 @@
+@font-face {
+  font-family: Shabnam;
+  src: url('./font/Shabnam.eot');
+  src: url('./font/Shabnam.eot?#iefix') format('embedded-opentype'),
+      url('./font/Shabnam.woff') format('woff'),
+      url('./font/Shabnam.ttf') format('truetype');
+  font-weight: normal;
+}
+      
+@font-face {
+  font-family: Shabnam;
+  src: url('./font/Shabnam-Bold.eot');
+  src: url('./font/Shabnam-Bold.eot?#iefix') format('embedded-opentype'),
+      url('./font/Shabnam-Bold.woff') format('woff'),
+      url('./font/Shabnam-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Shabnam;
+  src: url('./font/Shabnam-Light.eot');
+  src: url('./font/Shabnam-Light.eot?#iefix') format('embedded-opentype'),
+      url('./font/Shabnam-Light.woff') format('woff'),
+      url('./font/Shabnam-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
 .App {
-  text-align: center;
+  padding-block-start: 0.5%;
+  text-align: right;
+  font-family: 'Shabnam', sans-serif;
+  background-color: #fafafa;
+  color: black;
+
 }
 
 .App-logo {
@@ -11,10 +43,7 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }

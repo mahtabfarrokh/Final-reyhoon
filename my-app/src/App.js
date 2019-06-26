@@ -1,17 +1,16 @@
 import React from 'react';
 import { BrowserRouter , Route } from 'react-router-dom';
 import './App.css';
-import MyHeader from './MyHeader';
+import Main from './Main';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+    <div className="content">
+    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous"></link>
       <BrowserRouter>
-            <div className="main-content">
-              <div className="workspace">
-                <Route path="/main" render={()=>{return(
-                    <MyHeader />
+                <Route path="/" render={()=>{return(
+                    <Main />
 
                   )}}
                 />
@@ -20,11 +19,9 @@ function App() {
 
                   )}}
                 />
-              </div>
-            </div>
           </BrowserRouter>
-      </header>
-    </div>
+          </div>
+      </div>
   );
 }
 
