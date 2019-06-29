@@ -16,7 +16,6 @@ const options = [
 ];
 
 class Main extends React.Component {
-
     constructor(props) {
         super(props);
     }
@@ -24,29 +23,39 @@ class Main extends React.Component {
         selectedOption: null,
       };
     handleChange = async (selectedOption) => {
-        // let req = "http://localhost:3001/api/restaurnats?area=" 
-        // console.log(req)
-        // var result = await fetch(req, {
-        //     method: 'GET',
-        //     // mode:'no-cors',
-        //     headers: {
-        //         "Content-Type": "application/json"
-        //     }
-        // });
-        // if (!result.ok) {
-        //     throw Error(result.statusText);
-        // }
-        // let jsonRes = await result.text();
-        // let newRes = JSON.parse(jsonRes);
-        // console.log(newRes, jsonRes);
-
-        // this.setState({ selectedOption });
-        // console.log(`Option selected:`, selectedOption);
+        let req = "http://localhost:3001/api/restaurants/area/" + selectedOption 
+        console.log(req)
+        var result = await fetch(req, {
+            method: 'GET',
+            // mode:'no-cors',
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+        if (!result.ok) {
+            throw Error(result.statusText);
+        }
+        let jsonRes = await result.text();
+        let newRes = JSON.parse(jsonRes);
+        let i, j , c=0; 
+        let res = []; 
+        for(i=0 ; i< newRes.length; i++){
+            for (j=0; j<res.length; j++){
+                if(res[j]["label"]==newRes[i]["address"]["area"]){
+                    c=1;
+                    console.log("here")
+                    break;
+                }
+            }
+            if(c==0){
+                res.push({value:String(i), label:newRes[i]["address"]["area"]})
+            }
+        }
+        return res
     };
-    getStorageOptions(searchTerm) {
 
+    getStorageOptions(searchTerm) {
         console.log(searchTerm)
-        return options
       }
 
     onSelectChange = async (selected) => {
@@ -59,7 +68,7 @@ class Main extends React.Component {
             <Container className="main">
                 
                 <MyHeader />
-                
+
                 <Container className="search search-pic2">
                     <Row className="search-center row-shift">
                             <Col xs="2" sm="2" md="2" lg="3">
@@ -85,8 +94,8 @@ class Main extends React.Component {
                                     className="myinput"
                                     placeholder="مثلا نیاوران"
                                     // onChange={this.onSelectChange}
-                                    onInputChange={this.handleChange}
-                                    loadOptions={this.getStorageOptions.bind(this)}
+                                    loadOptions={this.handleChange}
+                                    // loadOptions={this.getStorageOptions.bind(this)}
                                 />
                                   <select className="myselect" name="selColor">
                                 <option value="r">تهران</option>
@@ -99,8 +108,6 @@ class Main extends React.Component {
                                
                             </Col>
                     </Row>
-                 
-
                 </Container>  
                 
                 <Container className="grid-container">

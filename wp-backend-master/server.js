@@ -1,6 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
+
+var cors = require('cors');
 const app = express();
+app.use(cors());
+
+
 const port = 3001;
 
 mongoose.connect("mongodb://localhost/reyhoon", { useNewUrlParser: true });

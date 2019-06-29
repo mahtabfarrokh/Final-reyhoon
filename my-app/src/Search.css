@@ -1,0 +1,272 @@
+.search{
+    max-width: 100% !important;
+    margin:0% !important;
+    padding: 0% !important;
+}
+.banner-search{
+    background:url(./img/restaurant-search-banner-2x.jpg) no-repeat; 
+    height:200px ;
+    min-width: 100%;
+    background-size: cover;
+    background-position:left;
+    margin: 0% !important; 
+
+}
+.search-info{
+    margin-block-start: 2%;
+    min-width: 100%;
+    max-width: 100% !important;
+    margin-left:0% !important;
+    margin-right:0% !important;
+}
+.line{
+    background-color: #dbdbdb;
+    height: 1px;
+    margin-block-end: 3%;
+    min-width: 100%;
+}
+.infoo{
+    padding-right: 10%;
+    padding-bottom: 1%; 
+    justify-content: flex-end;
+}
+.myinput{
+    direction:RTL;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-style:solid; 
+    min-height: 36px; 
+    max-width: 30%;
+    display: inline;
+    margin-block-end: 4%;
+    border: 0px !important;
+    font-size: 15px;
+    padding: 0%;
+    border-width: 0px !important;
+    outline: none;
+    font-family: 'Shabnam', sans-serif;
+    margin-left: 60% !important;
+    background-color: #fafafa !important;
+    border: 1px solid #dbdbdb !important;
+}
+.select-search{
+    justify-content: space-evenly;
+}
+.search-result{
+    background-color: #fafafa;
+    padding: 3%;
+}
+.myinput2{
+    direction:RTL;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-style:solid; 
+    min-height: 36px; 
+    min-width: 90%;
+    display: inline;
+    margin-block-end: 4%;
+    border: 1px ;
+    border-color: #dbdbdb;
+    font-size: 15px;
+    padding: 0%;
+    border-width: 1px !important;
+    outline: none;
+    font-family: 'Shabnam', sans-serif;
+    margin-left: 50% !important;
+    background-color: #fafafa !important;
+}
+.myinput2:focus{
+    border: 1px solid #dbdbdb !important;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
+}
+.myinput:focus{
+    border: 1px solid #dbdbdb !important;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
+}
+.position{
+    justify-content: flex-end;
+    padding-top: 3%;
+    padding-right:3%; 
+}
+.sizep{
+    color: #696969;
+    font-size: 12px;
+}
+.position Input{
+    color: #696969;
+    font-size: 14px;
+}
+.filter{
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    border-radius:5px;
+    padding: 0% !important;
+}
+.filter-name{
+    text-align: right;
+    justify-content: flex-end;
+    padding-right: 0% !important;
+}
+.filter-checkbox{
+    /* cursor: pointer; */
+    /* visibility: hidden; */
+}
+.filter-label{
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: .4rem;
+    border: .1rem solid #cbcbcb;
+}
+.filter-label{
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white !important;
+    background: #fff;
+    border-radius: .4rem !important;
+    border-color: #cbcbcb !important;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
+}
+.filter-label2{
+    background-color: white !important;
+    background:url(./img/checkbox.jpg) no-repeat;
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 1.5rem 1.5rem !important;
+    border-radius: .4rem !important;
+    border: .1rem solid #d40062 !important; 
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
+}
+.line2{
+    background-color: #cecece;
+    height: 3px;
+    margin-block-end: 3%;
+    min-width: 100%;
+
+}
+.mynone{
+    display: none
+}
+.pic-rest2{
+    height: 90px;
+    width: 90px;
+    margin-block-start: 5%;
+    margin-block-end: 5%;
+    border-radius: 5px;
+    border: 1px solid #dbdbdb;
+}
+.rest-image{
+    /* background:url(./img/3rest.png) no-repeat;  */
+    background-size: cover;
+    margin-right: 1%;
+    margin-left: 0% !important;
+}
+.boldit {
+    padding-top: 15%;
+    font-weight: bold;
+}
+.star-rate2{
+    font-size: 16px;
+    padding: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 4%;
+
+}
+.gs2 {
+    display: inline;
+    padding-left: 0px; 
+    padding-right: 0px !important;
+    color: #ffc700;  
+    font-size: 16px;
+    /* align-content: center;
+    text-align: center; */
+}
+.gs2 pre {
+    color: #ffc700;  
+    font-size: 16px;
+    /* padding-top: 15%; */
+}
+.info3 { 
+    margin-block-start: 4%;
+    color: #2c2c2c;
+    font-weight:bold; 
+    font-size: 12px;
+    text-align: right;
+}
+.info4 { 
+    padding-block-start: 5%;
+    color: #8b8b8b;
+    font-weight:normal;
+    font-size: 11px;
+    text-align: right;
+}
+.rightside{
+    justify-content: flex-end;
+}
+.start-request{
+    padding-block-start: 10%;
+    justify-content: flex-start;
+}
+.restaurantt{
+    max-width: 40%;
+    min-width: 300px;
+    min-height: 300px;
+    border-radius: 5px;
+    padding-top: 2%; 
+    padding-right: 3% !important; 
+    padding-block-end: 0%;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.14);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.14);
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.14);
+}
+.restaurantt :hover .myButton{
+    background-color:#cf006815;
+}
+.restaurantt :hover:not(.pic-rest) {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14);
+}
+.row-space-aroundd :hover {
+    -webkit-box-shadow: 2px 2px 10px 3px rgba(0,0,0,0.14);
+    -moz-box-shadow: 2px 2px 10px 3px rgba(0,0,0,0.14);
+    box-shadow: 2px 2px 10px 3px rgba(0,0,0,0.14);
+}
+.row-space-aroundd {
+    justify-content: flex-end;
+    /* margin-block-end: 4%; */
+}
+.closed{
+    background-color: #cfcfcf !important;
+}
+.boldittt{
+    padding-top: 7%;
+    padding-bottom: 2%;
+    font-weight: bold;
+}
+.fix-filter{
+    max-height: 600px;
+    min-height: 300px;
+}
