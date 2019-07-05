@@ -28,7 +28,8 @@
 .infoo{
     padding-right: 10%;
     padding-bottom: 1%; 
-    justify-content: flex-end;
+    direction: rtl;
+    justify-content: flex-start;
 }
 .myinput{
     direction:RTL;
@@ -36,7 +37,7 @@
     border-top-left-radius: 0px;
     border-style:solid; 
     min-height: 36px; 
-    max-width: 30%;
+    max-width: 40%;
     display: inline;
     margin-block-end: 4%;
     border: 0px !important;
@@ -48,9 +49,12 @@
     margin-left: 60% !important;
     background-color: #fafafa !important;
     border: 1px solid #dbdbdb !important;
+    border-right: 0px !important;
+    margin-right: 0% !important;
+    margin-left: 75% !important;
 }
 .select-search{
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .search-result{
     background-color: #fafafa;
@@ -293,4 +297,17 @@
 .myButtonn:active {
 	position:relative;
 	top:1px;
+}
+.icon-search-search{
+    background-color: #fafafa !important;
+    border: 1px solid #dbdbdb !important;
+    border-left: 0px !important;
+    height: 38px; 
+    display: inline;
+    font-size: 25px !important;
+    margin-block-end: 4%;
+    color:#777;
+    border-radius: 0 .2rem  .2rem  0 ;
+    margin-left: 0% !important;
+    margin-right: 19% !important;
 }

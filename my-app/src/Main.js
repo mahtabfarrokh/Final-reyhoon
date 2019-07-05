@@ -18,11 +18,21 @@ const options = [
 class Main extends React.Component {
     constructor(props) {
         super(props);
+        this.getIt = this.getIt.bind(this);
+        this.onSelectChange = this.onSelectChange.bind(this);
+        this.state = {
+            mySelectedOption: "",
+          };
+          
     }
-    state = {
-        selectedOption: null,
-      };
+    getIt(){
+        console.log("wtf", this.state.mySelectedOption)
+        this.areaName = localStorage.setItem("area_name", this.state.mySelectedOption);
+    }
     handleChange = async (selectedOption) => {
+        if(selectedOption.includes("\n")){
+            console.log("heeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+        }
         let req = "http://localhost:3001/api/restaurants/area/" + selectedOption 
         console.log(req)
         var result = await fetch(req, {
@@ -51,19 +61,25 @@ class Main extends React.Component {
                 res.push({value:String(i), label:newRes[i]["address"]["area"]})
             }
         }
+        console.log(res)
         return res
     };
 
-    getStorageOptions(searchTerm) {
-        console.log(searchTerm)
-      }
-
-    onSelectChange = async (selected) => {
-        console.log("heeereeee")
-        console.log(selected.label)
+    onSelectChange(selected){
+        try{
+            let c = selected.label
+            console.log(c)
+            this.setState({
+                mySelectedOption : c
+            })
+            console.log(this.state.mySelectedOption)
+            // this.getIt()
+        }catch{
+            console.log("just delete happaned")
+        }
+        
     }
     render() {
-        const { selectedOption } = this.state;
         return (    
             <Container className="main">
                 
@@ -88,14 +104,17 @@ class Main extends React.Component {
                     <Row >            
                             <Col xs="5" sm="5" md="4" lg="4" className="hard-grid" >
                                 <Row>
-                                <input className="search-icon"/>
+                                <a onClick={this.getIt} href="/search" className="search-icon"></a>
                                 <AsyncSelect
-                                    value={selectedOption}
-                                    className="myinput"
+                                    className="myinputt"
                                     placeholder="مثلا نیاوران"
-                                    // onChange={this.onSelectChange}
+                                    onChange={this.onSelectChange}
                                     loadOptions={this.handleChange}
-                                    // loadOptions={this.getStorageOptions.bind(this)}
+                                    selectedOption={this.state.mySelectedOption}
+                                    onKeyDown={this.getIt}
+                                    backspaceRemoves={true} 
+                                    deleteRemoves={true}
+                                    isClearable={true}
                                 />
                                   <select className="myselect" name="selColor">
                                 <option value="r">تهران</option>

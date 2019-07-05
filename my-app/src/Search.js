@@ -16,7 +16,7 @@ const filter = [
 class Search extends React.Component {
     constructor(props) {
         super(props);
-        // this.areaName = localStorage.getItem("area_name");
+        this.areaName = localStorage.getItem("area_name");
         this.areaName = "keshavarz"
         this.search = ""
         this.state = {
@@ -28,7 +28,8 @@ class Search extends React.Component {
             restaurantsClosed: [],
             restaurants1: [],
             restaurants2: [],
-            closed: true
+            closed: true,
+            numRestaurant: 0
           };
           this.handleInputChange1 = this.handleInputChange1.bind(this);
           this.handleInputChange2 = this.handleInputChange2.bind(this);
@@ -54,6 +55,7 @@ class Search extends React.Component {
         let newRes = JSON.parse(jsonRes);
         let res = [];
         let res2 = [];
+        
         for(let i in newRes){
             let dic = []
             dic.push(newRes[i].name)
@@ -83,7 +85,8 @@ class Search extends React.Component {
             restaurants1: res,
             restaurants2: res,
             restaurantsClosed: res2,
-            closed: close
+            closed: close,
+            numRestaurant:newRes.length
         })
     }
     handleInputChange1(event) { 
@@ -210,6 +213,7 @@ class Search extends React.Component {
         // this.restName = localStorage.setItem("rest_name", this.state.);
     }
     render() {
+        var koko = ""
         return (    
             <Container className="search">
                 <MyHeader />
@@ -217,17 +221,24 @@ class Search extends React.Component {
                 </Container>
                 <Container className="search-info">
                     <Row className="infoo">
-                        <h5>رستوران امکان سرویس دهی دارند</h5>
+                        <h5>{this.state.numRestaurant.toString()} رستوران امکان سرویس دهی به {this.areaName} را دارند</h5>
                     </Row>
                     <Row className="line">
                         <pre> </pre>
                     </Row>
                     <Row className="select-search">
+                        <Col xs="10" sm="10" md="10" lg="10" >
                         <Input
                             className="myinput"
                             placeholder="جست و جوی رستوران در این محدوده"
                             onChange={this.handleSearch.bind(this)}
                         />
+                        </Col>
+                        <Col xs="2" sm="2" md="2" lg="2">
+                        <i class="fas fa-search icon-search-search"></i>
+                        </Col>
+                        
+                       
                     </Row>
                     <Row className="search-result"> 
                         <Col xs="8" sm="8" md="8" lg="9" >

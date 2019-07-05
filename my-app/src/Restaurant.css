@@ -79,8 +79,10 @@
     margin-block-end: 0%;
     border-radius: 5px;
     border: 1px solid #dbdbdb;
+    margin-right: 10%;
 }
 .title-detail{
+    padding-right: 10%;
     margin-block-start: -15% !important;
     font-weight: bold;
 }
@@ -94,6 +96,18 @@
 .staar-detail{
     margin-block-start: 2%;
 }
+.gstar1-sec{
+    display: inline;
+    color: #9b9b9b;;  
+    font-size: 13px;
+    font-weight: bold;
+}
+.gstar1-sec p {
+    color: #9b9b9b;  
+    font-size: 13px;
+    margin-left: 80%;
+}
+
 .gstar1 {
     display: inline;
     padding-left: 5%;
@@ -133,12 +147,12 @@
     /* padding-top: 15%; */
 }
 .gstar3 {
-    padding-right: 0px !important;
+    /* padding-right: 0px !important; */
     color: #ffc700;  
     font-size: 16px;
 }
 .row-center{
-    justify-content: center;
+    top: 0px;
     /* margin-block-start: -%; */
 }
 .title-detail2{
@@ -211,6 +225,23 @@
         padding-left: 10% !important;
         padding-right: 10% !important;
     }
+    .show-ittt{
+        display: none !important;
+        width: 0% !important;
+    }
+    .restaurant-detail-part2{
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+    }
+    .atFuckingMorning3{
+        margin-left: 5% !important; 
+    }
+    .endofcomment{
+        margin-left: 5% !important; 
+    }
+    .rest-info-detail{
+        margin-left: 5% !important; 
+    }
 }
 @media screen and (max-width: 900px) {
     .title-detail{
@@ -228,6 +259,7 @@
         padding-left: 5% !important;
         padding-right: 5% !important;
     }
+    
 }
 @media screen and (max-width: 800px) {
     .title-detail{
@@ -255,11 +287,17 @@
 .list-menu{
     border-right: 1px solid #dbdbdb;
     margin-block-start: 50px !important;
+    
+}
+.vaaaa{
+    top: 0px;
+    position : sticky !important;
 }
 .butt-menu{
     margin-block-start: -5px !important;
     background-color: white !important;
     border: 0px !important;
+    font-size: 14px !important;
     -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
     -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
@@ -269,12 +307,13 @@
 }
 .butt-menu-coler1{
     color: #202020 !important;
+    margin-right: 5px;
 }
 .line-menu{
     background-color: #d40062;
     height: 2px;
     width: 30px;
-    margin-left: 75%;
+    margin-left: 70%;
 }
 .restaurant-detail-part2{
     max-width: 100% !important;
@@ -292,10 +331,16 @@
     border-bottom: 1px solid #dbdbdb !important;
     direction: rtl;
     border-radius: 0% !important;
-    margin-left: 25% !important; 
+    margin-left: 8% !important; 
     -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
     -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
+}
+.icon-search{
+    border-bottom: 1px solid #dbdbdb !important;
+    font-size: 28px;
+    color: #777;
+    padding-bottom: 9px;
 }
 .searchbar2 {
     border: 0px !important;
@@ -334,8 +379,8 @@
 }
 .pic-detail-food{
     margin-top: -20px !important; 
-    height: 90px;
-    width: 90px;
+    height:85px;
+    width: 85px;
 }
 .row-foods{
     justify-content: flex-end;
@@ -354,7 +399,7 @@
 	border:1px solid #ffe9f3;
 	cursor:pointer;
 	color:#cf0068 !important;
-	font-size:11px !important;
+	font-size:10px !important;
     padding:8px 8px;
     text-decoration:none;
 }
@@ -427,6 +472,7 @@
 }
 .atFuckingMorning2{
     font-size: 20px !important;
+    justify-content: center;
 }
 .atFuckingMorning2 i {
     font-size: 20px !important;
@@ -437,13 +483,15 @@
     padding-left: 20%;
     color: #9b9b9b !important;
 }
-.atFuckingMorning3 p {
+.setareh{
     font-size: 22px !important;
     color: #ffc700 !important;
     font-weight: bold;
+    text-align: center;
+    justify-content: center;
 }
 .atFuckingMorning3{
-    padding-left: 32%;
+    justify-content: center;
     border-bottom: 1px solid #dbdbdb !important;
     border-radius: 0% !important;
     margin-left: 25% !important; 
@@ -497,4 +545,36 @@
 }
 .dontwannasaybadwords{
     justify-content: flex-end;
+}
+.lanati{
+    padding-top: 4%;
+    padding-left: 10% !important; 
+    /* border-top: 1px solid #dbdbdb !important; */
+    justify-content: center;
+    margin-block-end: 3%;
+    width: 75%;
+}
+.exusted{
+    justify-content: center;
+    padding-left: 19%;
+    padding-top: 1%; 
+}
+.skifh{
+    justify-content: space-evenly;
+    padding-top: 4%;
+    border-top: 1px solid #dbdbdb !important;
+}
+.lanatip{
+    color: #9b9b9b !important;
+    font-weight: bold;
+    font-size: 14px;
+}
+.lanatip2{
+    color: #ffc700;
+    font-weight: bold;
+}
+.showup{
+    width: 100%;
+    min-height: 10px;
+    /* background-color: #ffc700 !important;s */
 }

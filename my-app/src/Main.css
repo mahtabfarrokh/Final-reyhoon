@@ -60,7 +60,7 @@
     font-size: 15px;
     outline: none;
 }
-.myinput {
+.myinputt {
     direction:RTL;
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
@@ -84,8 +84,11 @@
     background-size: 30px 36px;
     margin: 0%;
     padding-right: 0% !important;
-    border : 0px;
+    border : 0px solid white!important;
     margin-left:1%;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.14) !important;
 }
 .search-h h3{
     font-weight: bold;
@@ -758,7 +761,7 @@
     .search-icon {
         display: none
     }
-    .myinput{
+    .myinputt{
         width: 98%;
     }
     .myselect{
