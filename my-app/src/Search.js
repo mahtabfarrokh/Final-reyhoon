@@ -4,8 +4,6 @@ import './star.css';
 import MyHeader from './MyHeader';
 import MyFooter from './MyFooter';
 import StarRatingComponent from 'react-star-rating-component';
-import Select from 'react-select';
-import myimg from './img/op6.jpeg'
 import img2 from './img/search.jpg'
 
 import {
@@ -34,6 +32,7 @@ class Search extends React.Component {
           };
           this.handleInputChange1 = this.handleInputChange1.bind(this);
           this.handleInputChange2 = this.handleInputChange2.bind(this);
+          this.saveInfo = this.saveInfo.bind(this)
     }
     async componentDidMount(){
         await this.getRestaurants()
@@ -58,7 +57,7 @@ class Search extends React.Component {
         for(let i in newRes){
             let dic = []
             dic.push(newRes[i].name)
-            dic.push(require('./img/op6.jpeg'))
+            dic.push(newRes[i].logo)
             dic.push(newRes[i].address.addressLine)
             let cat = " "
 
@@ -70,7 +69,7 @@ class Search extends React.Component {
             }
             dic.push(cat)
             dic.push(newRes[i].averageRate)
-            if (newRes[i].openingTime<= hours && newRes[i].closingTime >= hours){
+            if (7<= hours && newRes[i].closingTime >= hours){
                 res.push(dic)
             }
             else{
@@ -118,7 +117,6 @@ class Search extends React.Component {
                 }
             }
         }
-
         this.setState({
             showLine: r,
             filterName1: temp1,
@@ -127,7 +125,6 @@ class Search extends React.Component {
             restaurants: temp4
 
         });
-        // this.handleSearch2(this.search)
       }
     handleInputChange2(event) { 
         let target = event.target;
@@ -167,8 +164,6 @@ class Search extends React.Component {
             restaurants1: temp3,
             restaurants: temp4
         });
-        // this.handleSearch2(this.search)
-
     }
     handleChange(input_filter){
         let f = input_filter.target.value;
@@ -198,7 +193,22 @@ class Search extends React.Component {
         });
 
     }
-  
+    saveInfo(event){
+        console.log("Done :D")
+        for(let i in event.target){
+            try{
+                if(event.target[i].value != undefined){
+                    console.log(event.target[i].value)
+                    this.restName = localStorage.setItem("rest_name", event.target[i].value);
+                    break
+                }
+            }catch{
+                continue
+            }
+            
+        }
+        // this.restName = localStorage.setItem("rest_name", this.state.);
+    }
     render() {
         return (    
             <Container className="search">
@@ -214,7 +224,6 @@ class Search extends React.Component {
                     </Row>
                     <Row className="select-search">
                         <Input
-                            // value={selectedOption}
                             className="myinput"
                             placeholder="جست و جوی رستوران در این محدوده"
                             onChange={this.handleSearch.bind(this)}
@@ -227,10 +236,6 @@ class Search extends React.Component {
                                 
                                         {     
                                             this.state.restaurants.map(function(item, i){
-                                                // let styles = {
-                                                //     backgroundImage: myimg,
-                                                //   };
-                                                //   console.log(styles)
                                                 return <Col className="restaurantt" xs="3" sm="3" md="3" lg="3" >
                                                 <Container >  
                                                     <Row>
@@ -266,21 +271,18 @@ class Search extends React.Component {
                                                             </Row>
                                                         </Col>
                                                         <Col xs="3" sm="3" md="3" lg="3">
-                                                            <img src={item[1]} className="pic-rest2 rest-image" />
-                                                            {/* <input style={styles} className="pic-rest2 rest-image"/> */}
+                                                            <img alt="logo" src={process.env.PUBLIC_URL + item[1]} className="pic-rest2 rest-image" />
                                                         </Col>
                                                     </Row>
-                                                    <Row className="start-request">
+                                                    <Row className="start-request"> 
                                                         <Col xs="10" sm="10" md="10" lg="10" >
-                                                        <a href="#" className="myButton">شروع سفارش</a>
+                                                        <a  href={"restaurant/"+item[0]} onClick={this.saveInfo} value={item[0]} className="myButtonn">شروع سفارش</a>
                                                         </Col>
                                                     </Row>
                                                 </Container>
                                             </Col>
                                             }, this )
                                         }
-
-                                        
 
                                 </Row>
                                 <Row className="row-space-aroundd" >
@@ -354,10 +356,6 @@ class Search extends React.Component {
                                         className="myinput2"
                                         placeholder="جست و جوی دسته بندی غذاها"
                                         onChange={this.handleChange.bind(this)}
-
-                                        // onInputChange={this.handleChange}
-                                        // loadOptions={this.loadOptions.bind(this)}
-                                        // ref={(input) => {this.lineRef[0] = input }}
                                     />
                                 </Row> 
                                 

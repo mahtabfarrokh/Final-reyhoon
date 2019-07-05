@@ -241,7 +241,7 @@
     -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.14);
     box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.14);
 }
-.restaurantt :hover .myButton{
+.restaurantt :hover .myButtonn{
     background-color:#cf006815;
 }
 .restaurantt :hover:not(.pic-rest) {
@@ -269,4 +269,28 @@
 .fix-filter{
     max-height: 600px;
     min-height: 300px;
+}
+.myButtonn {
+	background-color:#ffffff;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px;
+	border:1px solid #cf0068;
+	display:inline-block;
+	cursor:pointer;
+	color:#cf0068 !important;
+	font-family:Impact;
+	font-size:13px;
+    padding:8px 27px;
+    margin-block-start: 4%;
+	text-decoration:none;
+}
+.myButtonn:hover {
+    background-color:#cf006815;
+    text-decoration:none;
+    color:#cf0068;
+}
+.myButtonn:active {
+	position:relative;
+	top:1px;
 }
