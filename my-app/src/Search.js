@@ -17,7 +17,7 @@ class Search extends React.Component {
     constructor(props) {
         super(props);
         this.areaName = localStorage.getItem("area_name");
-        this.areaName = "keshavarz"
+        // this.areaName = "keshavarz"
         this.search = ""
         this.state = {
             selectedOption: null,
@@ -36,8 +36,23 @@ class Search extends React.Component {
           this.saveInfo = this.saveInfo.bind(this)
     }
     async componentDidMount(){
+        await this.getRealName()
         await this.getRestaurants()
-        console.log(this.state.restaurants)
+    }
+    async getRealName(){
+        this.c= localStorage.getItem("area_name");
+        var result = await fetch("http://localhost:3001/api/restaurants/en/"+this.c, {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+        if (!result.ok) {
+            throw Error(result.statusText);
+        }
+        let jsonRes = await result.text();
+        this.areaName = jsonRes
+
     }
     async getRestaurants(){
         var hours = new Date().getHours();
@@ -71,7 +86,7 @@ class Search extends React.Component {
             }
             dic.push(cat)
             dic.push(newRes[i].averageRate)
-            if (7<= hours && newRes[i].closingTime >= hours){
+            if (newRes[i].openingTime<= hours && newRes[i].closingTime >= hours){
                 res.push(dic)
             }
             else{
@@ -86,7 +101,7 @@ class Search extends React.Component {
             restaurants2: res,
             restaurantsClosed: res2,
             closed: close,
-            numRestaurant:newRes.length
+            numRestaurant:newRes.length - res2.length
         })
     }
     handleInputChange1(event) { 
@@ -196,13 +211,24 @@ class Search extends React.Component {
         });
 
     }
-    saveInfo(event){
+    async saveInfo(event){
         console.log("Done :D")
         for(let i in event.target){
             try{
                 if(event.target[i].value != undefined){
-                    console.log(event.target[i].value)
-                    this.restName = localStorage.setItem("rest_name", event.target[i].value);
+                    let fa_name = event.target[i].value
+                    var result = await fetch("http://localhost:3001/api/restaurants/en/"+fa_name, {
+                        method: 'GET',
+                        headers: {
+                            "Content-Type": "application/json"
+                        }
+                    });
+                    if (!result.ok) {
+                        throw Error(result.statusText);
+                    }
+                    let jsonRes = await result.text();
+                    let en_rest = jsonRes
+                    this.restName = localStorage.setItem("rest_name", en_rest);
                     break
                 }
             }catch{
@@ -221,7 +247,7 @@ class Search extends React.Component {
                 </Container>
                 <Container className="search-info">
                     <Row className="infoo">
-                        <h5>{this.state.numRestaurant.toString()} رستوران امکان سرویس دهی به {this.areaName} را دارند</h5>
+                        <h5><b>{this.state.numRestaurant.toString()}</b> رستوران امکان سرویس دهی به <b>{localStorage.getItem("area_name")}</b> را دارند</h5>
                     </Row>
                     <Row className="line">
                         <pre> </pre>
@@ -296,12 +322,12 @@ class Search extends React.Component {
                                         }
 
                                 </Row>
-                                <Row className="row-space-aroundd" >
+                                <Row className="row-space-aroundd-title" >
                                     {
                                         this.state.closed ? <h4 className="boldittt" >رستوران های بسته </h4> : null
                                     }
                                 </Row>
-                                <Row className="row-space-aroundd" >
+                                <Row className="row-space-aroundd-title" >
                                     {        
                                         this.state.restaurantsClosed.map(function(item, i){
                                             return <Col className="restaurantt closed" xs="3" sm="3" md="3" lg="3" >

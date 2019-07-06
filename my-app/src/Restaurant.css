@@ -362,6 +362,7 @@
     font-weight: bold;
 }
 .food-item{
+    margin-block-end: 5%;
     background-color: white;
     border-radius: 5px;
     border: 1px solid #ececec;

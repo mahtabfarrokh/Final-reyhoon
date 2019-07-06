@@ -163,6 +163,12 @@ async function find_area(area){
     console.log(c)
     return c 
 }
+async function find_en(name){
+    let name_en = await dictionary.model.find({'fa':name}).exec()
+    name_res  = name_en[0]['en']
+    console.log(name_res)
+    return name_res
+}
 module.exports = {
     get_restaurants: get_restaurants,
     restaurants_info: restaurants_info,
@@ -170,4 +176,5 @@ module.exports = {
     save_comment: save_comment, 
     save_restaurant: save_restaurant,
     find_area: find_area,
+    find_en: find_en
 }

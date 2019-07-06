@@ -11,23 +11,14 @@ import {
     Container, Col, Row, Input, Label, Button , Progress
   } from 'reactstrap';
 
-const list_menu = ['صبحانه',
-                    'پیتزا',
-                    'برگر',
-                    'استیک'
-                ]
-const food = [{
-                'header': 'صبحانه', 
-              'items': ['پن کیک', 'املت']
-            }]
 class Restaurant extends React.Component {
     constructor(props) {
         super(props);
 
-        // this.restName = localStorage.getItem("rest_name");
-        this.areaName = "keshavarz"
-        this.lt = "<"
-        this.restName= "shandiz-jordan"
+        this.restName = localStorage.getItem("rest_name");
+        this.areaName = localStorage.getItem("area_name");
+        this.lt = ">"
+        this.gt = "<"
         this.state = {
             restaurant: {},
             tab1: false,
@@ -206,14 +197,18 @@ class Restaurant extends React.Component {
                 <Container className="restaurant-detail">
                     <Row className="row-rest-center">
                         <Col xs="2" sm="2" md="2" lg="2">
-                            <Label className="gigili gi0"> {this.lt} رستوران ها</Label>
+                            <Label className="gigili gi0"> {this.gt} رستوران ها</Label>
                         </Col>
                         <Col xs="4" sm="4" md="4" lg="4" >
-                            <a className="gigili gi1">{this.state.restaurant["name"]}</a>
+                            <a className="gigili gi4" href="/">ریحون</a>
                             <a className="gigili gi2">{this.lt}</a>
                             <a className="gigili gi3" href="/search"> {this.areaName}</a>
                             <a className="gigili gi2">{this.lt}</a>
-                            <a className="gigili gi4" href="/">ریحون</a>
+                            <a className="gigili gi1">{this.state.restaurant["name"]}</a>
+                          
+                            
+                            
+                            
                         </Col>   
                     </Row>
                     <Row className="row-detail-center">
@@ -334,37 +329,7 @@ class Restaurant extends React.Component {
                                    {
                                        this.state.menu.map(function(item, i){
                                             var food = item['items'].map(function (element, j) {
-                                                return [<Col xs="11" sm="11" md="11" lg="5" className="food-item-tof">
-                                                    <Container className="food-item"> 
-                                                        <Row className="row-inside-food inside-koofti">
-                                                            <Col xs="4" sm="4" md="4" lg="4" className="inside-koofti">
-                                                                <Row className="inside-koofti">
-                                                                <Col xs="1" sm="1" md="1" lg="1" >
-                                                                <p className="food-inside-text2 inside-koofti"> تومان</p>
-                                                                </Col>
-                                                                <Col xs="3" sm="3" md="3" lg="3" >
-                                                                <p className="food-inside-text inside-koofti">{element[1]}</p>
-                                                                </Col>
-                                                                
-                                                                
-                                                                </Row>
-                                                            </Col>
-                                                            <Col xs="5" sm="5" md="5" lg="5" className="inside-koofti">
-                                                                <p className="food-inside-text inside-koofti">{element[0]}</p>
-                                                            </Col>
-                                                        </Row>
-                                                        <Row className="row-inside-food inside-koofti">
-                                                            <Col xs="2" sm="2" md="2" lg="2" className="inside-koofti">
-                                                            <img src='/op8.jpeg' className="pic-detail-food inside-koofti" />
-                                                            </Col>
-                                                            <Col xs="7" sm="7" md="9" lg="8" className="inside-koofti">
-                                                            <a  className="myButtonn-food inside-koofti">افزودن به سبد خرید +</a>
-                                                            </Col>
-                                                        </Row>
-
-                                                        </Container>
-                                                        </Col>, 
-                                                        <Col xs="11" sm="11" md="11" lg="5" className="food-item-tof">
+                                                return  <Col xs="11" sm="11" md="11" lg="5" className="food-item-tof">
                                                         <Container className="food-item"> 
                                                             <Row className="row-inside-food inside-koofti">
                                                                 <Col xs="4" sm="4" md="4" lg="4" className="inside-koofti">
@@ -393,7 +358,7 @@ class Restaurant extends React.Component {
                                                             </Row>
     
                                                             </Container>
-                                                            </Col>]
+                                                            </Col>
                                             });
                                            return [<Row>
                                                     <Col>

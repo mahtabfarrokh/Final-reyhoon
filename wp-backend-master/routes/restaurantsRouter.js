@@ -37,4 +37,8 @@ restaurantsRouter.get('/area/:area', async function (req, res) {
     let response = await func.find_area(req.params.area)
     res.send(response)
   });
+restaurantsRouter.get('/en/:name', async function (req, res) {
+    let response = await func.find_en(req.params.name)
+    res.send(response)
+  });
   module.exports = restaurantsRouter;

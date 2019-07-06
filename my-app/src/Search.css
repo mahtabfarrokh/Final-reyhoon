@@ -262,6 +262,10 @@
     justify-content: flex-end;
     /* margin-block-end: 4%; */
 }
+.row-space-aroundd-title {
+    justify-content: flex-end;
+    /* margin-block-end: 4%; */
+}
 .closed{
     background-color: #cfcfcf !important;
 }
