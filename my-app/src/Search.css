@@ -244,6 +244,7 @@
     -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.14);
     -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.14);
     box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.14);
+    margin:2%;
 }
 .restaurantt :hover .myButtonn{
     background-color:#cf006815;
@@ -264,6 +265,7 @@
 }
 .row-space-aroundd-title {
     justify-content: flex-end;
+    /* margin: 2% !; */
     /* margin-block-end: 4%; */
 }
 .closed{

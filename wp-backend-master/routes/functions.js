@@ -39,26 +39,91 @@ async function get_restaurants(area, categoryList) {
        return final_result
     }
     return result
+
     // var new_category = new category.model({id:"1", name:"غذای ایرانی"})
-    // new_category.save();
-    // var new_food = new food.model({id:"1", name:"کباب", price: 100, description: "...", foodSet:"کباب"})
+    // var new_category1 = new category.model({id:"2", name:"صبحانه"})
+    // var new_category2 = new category.model({id:"3", name:"خوراک"})
+    // var new_category3 = new category.model({id:"4", name:"پلویی"})
+    // var new_category4 = new category.model({id:"5", name:"پیش غذا"})
+    // var new_category5 = new category.model({id:"6", name:"نوشیدنی"})
+    // var new_category6 = new category.model({id:"7", name:"غذای اصلی"})
+    // var new_category7 = new category.model({id:"8", name:"سالاد"})
+    // var new_category8 = new category.model({id:"9", name:"دیزی"})
+    // var new_category9 = new category.model({id:"10", name:"ساندویچ"})
+
+    // var new_food = new food.model({id:"1", name:"دیزی مخصوص", price: 500, description: "گوشت گردن گوسفندی", foodSet:"دیزی"})
+    // var new_food1 = new food.model({id:"2", name:"دیزی کلاسیک", price: 400, description: "گوشت گردن گوسفندی", foodSet:"دیزی"})
+    // var new_food2 = new food.model({id:"3", name:"کوفته تبریزی", price: 300, description: "۲ عدد کوفته", foodSet:"غذای ایرانی"})
+    // var new_food3 = new food.model({id:"4", name:"کشک بادمجان", price:300 , description: "400گرم", foodSet:"غذای ایرانی"})
+    // var new_food4 = new food.model({id:"5", name:"ترشی", price:20 , description: "", foodSet:"پیش غذا"})
+    // var new_food5 = new food.model({id:"6", name:"نوشابه قوطی", price: 10 , description: "", foodSet:"نوشیدنی"})
+
+    // var new_food6 = new food.model({id:"7", name:"کباب کوبیده", price: 400, description: "", foodSet:"خوراک"})
+    // var new_food7 = new food.model({id:"8", name:"جوجه کباب", price: 500, description: "ران مرغ بی استخوان", foodSet:"خوراک"})
+    // var new_food8 = new food.model({id:"9", name:"کباب برگ", price: 600, description: "گوشت راسته گوسفندی", foodSet:"پلویی"})
+    // var new_food9 = new food.model({id:"10", name:"دان تان برگر", price: 700, description: "گوشت راسته گوسفندی", foodSet:"ساندویچ"})
+    // var new_food10 = new food.model({id:"12", name:"آپ تان برگر", price: 700, description: "گوشت راسته گوسفندی", foodSet:"ساندویچ"})
+    // var new_food11 = new food.model({id:"12", name:"مید تان برگر", price: 700, description: "گوشت راسته گوسفندی", foodSet:"ساندویچ"})
+  
     // new_food.save();
-    // var new_food2 = new food.model({id:"2", name:"قرمه سبزی", price: 110, description: "...", foodSet:"چلو خورشت"})
-    // new_food.save();
-    // var new_comment = new comment.model({id:"1", author:"Mahtab", quality: 5, packaging: 1, deliveryTime:30, text: "غذای خیلی خوبی بود :دی", created_at: "2019-2-8"})
-    // new_comment.save(function (err, book) {
-    //     if (err) return console.error(err);
-    //     console.log(book.name + " saved to bookstore collection.");
-    //   });
-    // var new_address = new address.model({id:"1", city:"تهران", area: "کشاورز", addressLine: "ولیعصر - .."})
-    // new_address.save();
-    // var new_restaurant = new restaurant.model({id:"1", name:"شاندیز جردن", logo: "shandiz.jpg", openingTime: 12, closingTime: 22,
-    // averageRate:4, address: new_address, categories: [new_category], foods:[new_food, new_food2], comments:[new_comment]})
+    // var new_comment = new comment.model({id:"1", author:"Mahtab", quality: 5, packaging: 4, deliveryTime:3, text: "غذای خیلی خوبی بود :دی", created_at: "2019-2-8"})
+    // var new_comment1 = new comment.model({id:"2", author:"Monireh", quality: 5, packaging: 4, deliveryTime:3, text: "چه دیزی خوشمزه ای بود :دی", created_at: "2019-2-9"})
+    // var new_comment2 = new comment.model({id:"3", author:"Aisan", quality: 3, packaging: 4, deliveryTime:4, text: "حجم غذا زیاد بود =))", created_at: "2019-2-10"})
+    // var new_comment3 = new comment.model({id:"3", author:"Melika", quality: 5, packaging: 5, deliveryTime: 5, text: "شاید که من نظر ندم بهتره :دی", created_at: "2019-2-11"})
+
+    // var new_address = new address.model({id:"1", city:"تهران", area: "جردن", addressLine: "تهران، جردن، نبش خیابان ایرج، پلاک ۱۱۷"})
+    // var new_address1 = new address.model({id:"2", city:"تهران", area: "جردن", addressLine: "تهران، جردن، بلوار صبا، پلاک ۲۴"})
+    // var new_address2 = new address.model({id:"3", city:"تهران", area: "جردن", addressLine: "تهران، ولیعصر، بلوار میرداماد، نرسیده به چهارراه جردن"})
+    // var new_address3 = new address.model({id:"4", city:"تهران", area: "جردن", addressLine: "تهران، شریعتی، روبروی خیابان کلاهدوز"})
+    // var new_address4 = new address.model({id:"4", city:"تهران", area: "جلفا", addressLine: "تهران - جلفا .. "})
+
+
+    // var new_restaurant = new restaurant.model({id:"1", name:"شاندیز جردن", logo: "shandiz.jpg", openingTime: 10, closingTime: 22,
+    // averageRate:4.2, address: new_address1, categories: [new_category2,new_category3, new_category4, new_category5],
+    //  foods:[new_food6, new_food7, new_food8], comments:[new_comment, new_comment2, new_comment3]})
+
+    // var new_restaurant1 = new restaurant.model({id:"2", name:"دیزی باشی", logo: "dizi.jpeg", openingTime: 10, closingTime: 22,
+    // averageRate:4.1, address: new_address3, categories: [new_category,new_category8, new_category4, new_category5],
+    //  foods:[new_food, new_food1, new_food2, new_food3, new_food4, new_food5],
+    //   comments:[new_comment, new_comment1, new_comment2, new_comment3]})
+
+    // var new_restaurant2 = new restaurant.model({id:"3", name:"کافه مود", logo: "mood.jpeg", openingTime: 18, closingTime: 22,
+    // averageRate:4.5, address: new_address2, categories: [new_category1,new_category6, new_category7, new_category9],
+    //  foods:[new_food, new_food1, new_food2, new_food3, new_food4, new_food5],
+    //   comments:[new_comment, new_comment3]})
+
+    
+    // var new_restaurant3 = new restaurant.model({id:"4", name:"دان تان", logo: "mood.jpeg", openingTime: 18, closingTime: 22,
+    // averageRate:4, address: new_address, categories: [new_category5,new_category6, new_category9],
+    // foods:[new_food9, new_food10, new_food11],
+    // comments:[new_comment, new_comment3]})
+
+    // var new_restaurant4 = new restaurant.model({id:"5", name:"کباب گلستان", logo: "mood.jpeg", openingTime: 10, closingTime: 22,
+    // averageRate:4.5, address: new_address4, categories: [new_category2,new_category3, new_category4, new_category5],
+    // foods:[new_food6, new_food7, new_food8],
+    // comments:[new_comment, new_comment3]})
+
     // new_restaurant.save(function (err, book) {
     //         if (err) return console.error(err);
     //         console.log(book.name + " saved to bookstore collection.");
     //       });
-          
+        
+    // new_restaurant1.save(function (err, book) {
+    // if (err) return console.error(err);
+    // console.log(book.name + " saved to bookstore collection.");
+    // });
+    // new_restaurant2.save(function (err, book) {
+    // if (err) return console.error(err);
+    // console.log(book.name + " saved to bookstore collection.");
+    // });
+    // new_restaurant3.save(function (err, book) {
+    // if (err) return console.error(err);
+    // console.log(book.name + " saved to bookstore collection.");
+    // });
+    // new_restaurant4.save(function (err, book) {
+    //     if (err) return console.error(err);
+    //     console.log(book.name + " saved to bookstore collection.");
+    //     });   
     // var new_dictionary = new dictionary.model({fa: "غذای ایرانی", en: "iranian food"})
     // new_dictionary.save();
     // var new_dictionary = new dictionary.model({fa: "سالاد", en: "salad"})
@@ -73,8 +138,18 @@ async function get_restaurants(area, categoryList) {
     // new_dictionary.save();
     // var new_dictionary = new dictionary.model({fa: "کشاورز", en: "keshavarz"})
     // new_dictionary.save();
+    // var new_dictionary = new dictionary.model({fa: "جردن", en: "jordan"})
+    // new_dictionary.save();
+    // var new_dictionary = new dictionary.model({fa: "جلفا", en: "jolfa"})
+    // new_dictionary.save();
+    // var new_dictionary = new dictionary.model({fa: "دیزی باشی", en: "dizi-bashi"})
+    // new_dictionary.save(); 
+    // var new_dictionary = new dictionary.model({fa: "دان تان", en: "down-town"})
+    // new_dictionary.save(); 
+    // var new_dictionary = new dictionary.model({fa: "کافه مود", en: "cafe-mood"})
+    // new_dictionary.save(); 
 
-    return "DONE :)"
+    // return "DONE :)"
 }
 async function restaurants_info(name){
     let name_fa = await dictionary.model.find({'en':name}).exec()

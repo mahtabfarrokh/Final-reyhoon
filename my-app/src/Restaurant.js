@@ -78,14 +78,16 @@ class Restaurant extends React.Component {
                 n2 += 1
             }
         }
-        myavg = myavg / newRes[0].length
+        // myavg = myavg / newRes[0].length
         pac = pac / n
         deliv = deliv / n2
         let c = this.state.restaurant
-        c["averageRate"] = (myavg + pac + deliv)/3
+        c["averageRate"] = Number(c["averageRate"].toFixed(1))
+        pac = Number(pac.toFixed(1))
+        deliv = Number(deliv.toFixed(1))
         this.setState({
             comments:comments,
-            restaurant: c,
+            restaurant: c ,
             packaging: pac, 
             deliveryTime: deliv
         })
@@ -122,8 +124,8 @@ class Restaurant extends React.Component {
             }
             dic["category"] = cat
             let myavg = 0.0; 
-            // dic["averageRate"] = newRes[i].averageRate
-            dic["averageRate"] = myavg
+            dic["averageRate"] = newRes[i].averageRate
+            // dic["averageRate"] = myavg
             for(let j in newRes[i].foods){
                 let flag = true;
                 for(let k in list_food){
@@ -243,7 +245,7 @@ class Restaurant extends React.Component {
                                         </Col>
                                     </Row>
                                     <Row className="row-center">
-                                        <Col xs="4" sm="4" md="4" lg="3">
+                                        <Col xs="9" sm="8" md="7" lg="6">
                                             <h6 className="title-detail2" >{this.state.restaurant["category"]}</h6>
                                         </Col>
                                     </Row>
@@ -257,7 +259,7 @@ class Restaurant extends React.Component {
                         <Col  xs="10" sm="10" md="10" lg="10">
                         <Container>
                                     <Row className="row-center">
-                                        <Col xs="4" sm="4" md="4" lg="3">
+                                        <Col xs="9" sm="8" md="7" lg="6">
                                             <h6 className="title-detail3" >{this.state.restaurant["addressLine"]}</h6>
                                         </Col>
                                     </Row>
@@ -320,6 +322,7 @@ class Restaurant extends React.Component {
                         <Col xs="12" sm="12" md="10" lg="10">
                             <Container className="menu-detail" >
                                     <h1 ref="men" > </h1>
+                                    <h1  className="akbar2"> </h1>
                                     {
                                         this.state.searchbar? <Row>< Input className="searchbar2" placeholder="مثلا برگر"></Input></Row>
                                                             :<Row className="dontwannasaybadwords">
@@ -354,7 +357,7 @@ class Restaurant extends React.Component {
                                                                 </Col>
                                                             </Row>
                                                             <Row className="new-row-koooft inside-koofti">
-                                                                <p className="food-description inside-koofti">{"سلام"}</p>
+                                                                <p className="food-description inside-koofti">{element[2]}</p>
                                                             </Row>
                                                             <Row className="new-row-koooft inside-koofti">
                                                                 {/* <Col xs="2" sm="2" md="2" lg="2" className="inside-koofti">
@@ -370,7 +373,9 @@ class Restaurant extends React.Component {
                                             });
                                            return [<Row>
                                                     <Col>
-                                                    <h5 ref={"item"+i.toString()} className="header-food">{item['header']}</h5>
+                                                    <h1 ref={"item"+i.toString()}></h1>
+                                                    <h1  className="akbar"> </h1>
+                                                    <h5  className="header-food">{item['header']}</h5>
                                                     </Col>
                                                   </Row>, 
                                                   <Row className="row-foods">
@@ -412,9 +417,12 @@ class Restaurant extends React.Component {
                     <Row>
                         <Col xs="12" sm="12" md="10" lg="10">
                             <Container className="menu-detail" >
-                                  
+                                  <Row>
+                                        <h1 ref="wtf"> </h1>
+                                        <h1  className="akbar3"> </h1>
+                                  </Row>
                                    <Row className="rest-info-detail" >
-                                                <h1 ref="wtf"> </h1>
+                                                
                                                 <h5 >اطلاعات رستوران</h5>
                                     </Row>
                                    <Row>
@@ -445,9 +453,12 @@ class Restaurant extends React.Component {
                                        </Col>
                                        
                                    </Row>
-                                 
-                                   <Row className="rest-info-detail">
+                                   <Row>
                                         <h1 ref="com"> </h1>
+                                        <h1  className="akbar3"> </h1>
+                                   </Row>
+                                   <Row className="rest-info-detail">
+                                       
                                         <h5> نظرات کاربران در مورد {this.state.restaurant.name}</h5>
                                    </Row>
                                    <Row className="atFuckingMorning">

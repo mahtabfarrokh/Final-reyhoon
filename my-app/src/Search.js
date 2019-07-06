@@ -86,7 +86,7 @@ class Search extends React.Component {
             }
             dic.push(cat)
             dic.push(newRes[i].averageRate)
-            if (newRes[i].openingTime<= hours && newRes[i].closingTime >= hours){
+            if (newRes[i].openingTime <= 10 && newRes[i].closingTime >= hours){
                 res.push(dic)
             }
             else{

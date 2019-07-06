@@ -298,6 +298,21 @@
 
     overflow: visible;
 }
+.allah{
+    padding-block-end: 2% !important;
+}
+.akbar{
+    /* margin-block-end: 17% !important; */
+    height: 40px !important;
+}
+.akbar2{
+    /* margin-block-end: 17% !important; */
+    height: 80px !important;
+}
+.akbar3{
+    /* margin-block-end: 17% !important; */
+    height: 50px !important;
+}
 .butt-menu{
     margin-block-start: -5px !important;
     background-color: white !important;
