@@ -96,16 +96,20 @@ async function save_comment(name_rest, n_author, n_quality, n_text){
     var new_comment = new comment.model({id:"2", author:n_author, quality: n_quality, text: n_text, created_at: Date.now()})
     let last_comm = await restaurants_comments(name_rest)
     let comments = []
-    let i, c = 0;
+    let i, c = 0.0, c1 = 0.0, c2 = 0.0;
     for(i in last_comm){
         comments.push(last_comm[i][0])
         c += last_comm[i][0]["quality"]
+        c1 += last_comm[i][0]["packaging"]
+        c2 += last_comm[i][0]["deliveryTime"]
     }
     comments.push(new_comment)
     let name_fa = await dictionary.model.find({'en':name_rest}).exec()
     name = name_fa[0]['fa']
     c += new_comment["quality"]
-    let final_rate= c/(last_comm.length+1)
+    c1 += new_comment["packaging"]
+    c2 += new_comment["deliveryTime"]
+    let final_rate= c/(last_comm.length+1) + c1/(last_comm.length+1) + c2/(last_comm.length+1)
     try{
         let res = await restaurant.model.updateOne({'name':name}, {'comments': comments, 'averageRate': final_rate})
     }

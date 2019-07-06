@@ -82,7 +82,7 @@ class Restaurant extends React.Component {
         pac = pac / n
         deliv = deliv / n2
         let c = this.state.restaurant
-        c["averageRate"] = myavg
+        c["averageRate"] = (myavg + pac + deliv)/3
         this.setState({
             comments:comments,
             restaurant: c,
