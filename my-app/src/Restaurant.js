@@ -137,7 +137,7 @@ class Restaurant extends React.Component {
                     let d = {};
                     d["header"] = newRes[i].foods[j].foodSet
                     d["items"] = []
-                    d["items"].push([newRes[i].foods[j].name, newRes[i].foods[j].price])
+                    d["items"].push([newRes[i].foods[j].name, newRes[i].foods[j].price, newRes[i].foods[j].description])
                     list_food.push(d)
                     menu_cat.push(newRes[i].foods[j].foodSet)
                 }
@@ -334,25 +334,27 @@ class Restaurant extends React.Component {
                                                             <Row className="row-inside-food inside-koofti">
                                                                 <Col xs="4" sm="4" md="4" lg="4" className="inside-koofti">
                                                                     <Row className="inside-koofti">
-                                                                    <Col xs="1" sm="1" md="1" lg="1" >
+                                                                    <Col xs="1" sm="1" md="1" lg="1" className="inside-koofti">
                                                                     <p className="food-inside-text2 inside-koofti"> تومان</p>
                                                                     </Col>
-                                                                    <Col xs="3" sm="3" md="3" lg="3" >
+                                                                    <Col xs="3" sm="3" md="3" lg="3" className="inside-koofti">
                                                                     <p className="food-inside-text inside-koofti">{element[1]}</p>
                                                                     </Col>
                                                                     
-                                                                    
                                                                     </Row>
                                                                 </Col>
-                                                                <Col xs="5" sm="5" md="5" lg="5" className="inside-koofti">
+                                                                <Col xs="5" sm="5" md="5" lg="6" className="inside-koofti">
                                                                     <p className="food-inside-text inside-koofti">{element[0]}</p>
                                                                 </Col>
                                                             </Row>
-                                                            <Row className="row-inside-food inside-koofti">
-                                                                <Col xs="2" sm="2" md="2" lg="2" className="inside-koofti">
-                                                                <img src='/op8.jpeg' className="pic-detail-food inside-koofti" />
-                                                                </Col>
-                                                                <Col xs="7" sm="7" md="9" lg="8" className="inside-koofti">
+                                                            <Row className="new-row-koooft inside-koofti">
+                                                                <p className="food-description inside-koofti">{"سلام"}</p>
+                                                            </Row>
+                                                            <Row className="new-row-koooft inside-koofti">
+                                                                {/* <Col xs="2" sm="2" md="2" lg="2" className="inside-koofti">
+                                                                <img src='/rest-food.jpg' className="pic-detail-food inside-koofti" />
+                                                                </Col> */}
+                                                                <Col xs="7" sm="7" md="9" lg="11" className="inside-koofti">
                                                                 <a  className="myButtonn-food inside-koofti">افزودن به سبد خرید +</a>
                                                                 </Col>
                                                             </Row>

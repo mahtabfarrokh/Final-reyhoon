@@ -373,6 +373,11 @@
     height: 125px;
     padding: 3%;
 }
+.food-description{
+    direction: rtl;
+    font-size: 13px;
+    color: #9b9b9b; 
+}
 .food-item-tof :hover:not(.inside-koofti){
     -webkit-box-shadow: -1px 14px 40px -8px rgba(141, 141, 141, 0.71);
     -moz-box-shadow: -1px 14px 40px -8px rgba(141, 141, 141, 0.71);
@@ -390,6 +395,11 @@
 .row-inside-food{
     justify-content: space-between;
     margin: 0% !important;
+}
+.new-row-koooft{
+    justify-content: flex-end;
+    margin-right: 4% !important;
+
 }
 .myButtonn-food {
     margin-top: 200px !important; 
