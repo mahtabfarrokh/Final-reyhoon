@@ -252,21 +252,28 @@ class Restaurant extends React.Component {
                         </Col>
                     </Row>
                 </Container>
-                <Container className="restaurant-detail2">
+                <Container className="restaurant-detail2" >
                     <Row className="row-detail-center2">
                         <Col  xs="10" sm="10" md="10" lg="10">
                         <Container>
-                                
                                     <Row className="row-center">
                                         <Col xs="4" sm="4" md="4" lg="3">
                                             <h6 className="title-detail3" >{this.state.restaurant["addressLine"]}</h6>
                                         </Col>
                                     </Row>
-                                  
                                     <Row className="line line-detail2">
                                         <pre> </pre>
-                                    </Row>      
-                                 
+                                    </Row> 
+                                </Container>
+                        </Col>
+                    </Row>
+                </Container>
+
+
+                <Container className="restaurant-detail2 vaaaa" >
+                    <Row className="row-detail-center2">
+                        <Col  xs="10" sm="10" md="10" lg="10">
+                        <Container>
                                     <Row className="row-center">
                                         <Col xs="4" sm="4" md="4" lg="4">
                                             <Button onClick={this.changetab1} className="butt">نظرات کاربران</Button>
@@ -308,12 +315,11 @@ class Restaurant extends React.Component {
                         </Col>
                     </Row>
                 </Container>
-                <Container className="restaurant-detail-part2">
+                <Container className="restaurant-detail-part2 vvvv">
                     <Row>
                         <Col xs="12" sm="12" md="10" lg="10">
                             <Container className="menu-detail" >
                                     <h1 ref="men" > </h1>
-                                   
                                     {
                                         this.state.searchbar? <Row>< Input className="searchbar2" placeholder="مثلا برگر"></Input></Row>
                                                             :<Row className="dontwannasaybadwords">
